@@ -1,0 +1,1 @@
+//digunakan untuk penghubung antara UI HTML dan model User
