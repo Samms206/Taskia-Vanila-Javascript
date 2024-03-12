@@ -27,4 +27,13 @@ class User{
         return JSON.parse(localStorage.getItem('users')) || [];
     }
 
+    signInUser(username){
+        console.log(username)
+        //proses pengembaliand data ke signin.js controller
+        return{
+            success: true,
+            username
+        }
+    }
+
 }

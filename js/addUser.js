@@ -10,9 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
             username: document.getElementById('username').value,
         }
 
-        userManager.saveUser(userData);
+        const result = userManager.saveUser(userData);
 
-        console.log("berhasil tersubmit");
+        if (result.success) {
+            return window.location.href = '../signin.html';
+        }else{
+            console.log("proses simpan data gagal");
+        }
+
+        
     });
 
 });
