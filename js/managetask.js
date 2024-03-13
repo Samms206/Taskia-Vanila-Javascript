@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="flex flex-col">
                                 <p class="font-bold text-lg leading-[27px]">${task.taskName}</p>
-                                <p class="text-sm leading-[21px] text-taskia-grey">Created at 22 Agustus 2024</p>
+                                <p class="text-sm leading-[21px] text-taskia-grey">Created at ${task.createdAt}</p>
                             </div>
                         </div>
                         <div class="flex gap-4 font-semibold text-sm leading-[21px]">
