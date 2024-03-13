@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
 
-        usernameByInput = document.getElementById('username').value;
+        const usernameByInput = document.getElementById('username').value;
         
 
         const result = userManager.signInUser(usernameByInput);
 
         if (result.success) {
-            return window.location.href = '../signin.html';
+            alert('success login');
+            console.log(usernameByInput);
+            // return window.location.href = '../signin.html';
         }else{
-            console.log("proses simpan data gagal");
+            console.log(result.message);
         }
 
         

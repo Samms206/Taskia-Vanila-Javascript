@@ -1,13 +1,13 @@
 //Mengurus business logic
 //CRUD
 
-class User{
+class User {
 
-    constructor(){
+    constructor() {
         this.users = this.getUsers() || [];
     }
 
-    saveUser(userData){
+    saveUser(userData) {
         const newUser = {
             id: Date.now(),
             //...(titik tiga merupakan Spread syntax)
@@ -23,14 +23,29 @@ class User{
         }
     }
 
-    getUsers(){
+    getUsers() {
         return JSON.parse(localStorage.getItem('users')) || [];
     }
 
-    signInUser(username){
-        console.log(username)
+    signInUser(usernameByInput) {
+        //proses pemerikasaan username di local storage
+        const userExist = this.users.some(user => user.username.toLowerCase() == usernameByInput.toLowerCase());
+
+        if (userExist) {
+            //proses pengembalian data ke signIn.js controller
+            return {
+                success: true,
+                username,
+            }
+        } else {
+            return {
+                success: false,
+                message: "data tidak ditemukan!",
+            }
+        }
+
         //proses pengembaliand data ke signin.js controller
-        return{
+        return {
             success: true,
             username
         }
