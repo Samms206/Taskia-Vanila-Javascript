@@ -43,12 +43,6 @@ class User {
                 message: "data tidak ditemukan!",
             }
         }
-
-        //proses pengembaliand data ke signin.js controller
-        return {
-            success: true,
-            username
-        }
     }
 
 }
